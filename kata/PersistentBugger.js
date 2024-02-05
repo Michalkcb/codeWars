@@ -1,12 +1,14 @@
-import { string } from "prop-types";
+function persistence(num) {
+    let persistenceCount = 0;
 
-function persistence(num){
-    let persCount = 0;
+    function calculateProduct(n) {
+        return n.toString().split('').reduce((acc, digit) => acc * parseInt(digit, 10), 1);
+    }
 
-   while (num >= 10){
-    num = string(num).split(' ').reduce((acc,digit) => acc * digit,1)
-    persCount++
-   }
+    while (num >= 10) {
+        num = calculateProduct(num);
+        persistenceCount++;
+    }
 
-    return persCount;
+    return persistenceCount;
 }
