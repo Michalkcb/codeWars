@@ -1,12 +1,12 @@
+import { string } from "prop-types";
+
 function persistence(num){
     let persCount = 0;
-    whule (num ==="" || num < 1)
-        return
-    function calc(n){
-        const numStr = n.toString();
-        const digits = numStr.split(' ');
-        
-    }
+
+   while (num >= 10){
+    num = string(num).split(' ').reduce((acc,digit) => acc * digit,1)
+    persCount++
+   }
 
     return persCount;
 }
