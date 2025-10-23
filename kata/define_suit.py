@@ -16,11 +16,12 @@ DECK = ['2S','3S','4S','5S','6S','7S','8S','9S','10S','JS','QS','KS','AS',
 from preloaded import DECK
 
 def define_suit(card):
-    if (card[1] == 'C'):
+    ln = len(card)
+    if (card[ln-1] == 'C'):
         return 'clubs'
-    elif (card[1] == 'D'):
+    elif (card[ln-1] == 'D'):
         return 'diamonds'
-    elif (card[1] == 'H'):
+    elif (card[ln-1] == 'H'):
         return 'hearts'
-    elif (card[1] == 'S'):
+    elif (card[ln-1] == 'S'):
         return 'spades'
